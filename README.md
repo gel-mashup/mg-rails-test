@@ -6,11 +6,13 @@
 
 ### Install rails 7 [Rails installation](https://guides.rubyonrails.org/v5.1/getting_started.html#installing-rails)
 
-## Getting started
+# Getting started
+
 1. Clone the Repo using `Git clone https://github.com/gel-mashup/mg-rails-test`
 2. Run the app with `rails server`
 
-## Tasks
+## To-Do's
+
 1. Implement the missing features:
    - Sort by fruit amount
    - Fix descending sort
