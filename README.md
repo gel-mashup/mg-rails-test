@@ -8,7 +8,7 @@
 
 ## Getting started
 1. Clone the Repo using `Git clone https://github.com/gel-mashup/mg-rails-test`
-2. Run the app with `Rails server`
+2. Run the app with `rails server`
 
 ## Tasks
 1. Implement the missing features:
