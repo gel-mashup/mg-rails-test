@@ -22,7 +22,8 @@ class BasketCaseController < ApplicationController
         oranges: 5,
         apples: 9,
         grapes: 3,
-        watermelons: 2
+        watermelons: 2,
+        guavas: 4
       }
     end
 
