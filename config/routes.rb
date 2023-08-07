@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   root "basket_case#index"
 
   get 'basket_case/order_by_fruit'
+  get 'basket_case/order_by_amount'
 end
