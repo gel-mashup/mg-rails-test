@@ -6,7 +6,7 @@ class BasketCaseController < ApplicationController
 
   def order_by_fruit
     @list_items = @list_items.sort
-    @list_items = @list_items.reverse
+    @list_items = @list_items.reverse if params.has_key?(:order) && params[:order] == "desc"
     render 'basket_case/index'
   end
 
