@@ -14,32 +14,58 @@
  *= require_self
  */
 
-.data {
-  display: inline-block;
-  padding: 8px 16px;
-  background-color: #999;
-  margin-bottom: 20px;
-}
-
-.button {
-  background-color: #0a0a23;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  padding: 15px;
-  min-height: 30px;
-  min-width: 120px;
-  text-decoration: none;
-  margin: 0 8px;
-}
-
-.button:hover {
-  background-color: #002ead;
-  transition: 0.7s;
-}
-
-.button:focus {
-  outline-color: transparent;
-  outline-style: solid;
-  box-shadow: 0 0 0 4px #5a01a7;
-}
+ body {font-family: Arial, Helvetica, sans-serif;}
+ * {box-sizing: border-box;}
+ 
+ .data {
+   display: inline-block;
+   padding: 8px 16px;
+   background-color: #003A6C;
+   color: white;
+   margin-bottom: 20px;
+ }
+ 
+ .container {
+   border-radius: 5px;
+   background-color: #f2f2f2;
+   padding: 20px;
+ }
+ 
+ table {
+   font-family: Arial, Helvetica, sans-serif;
+   border-collapse: collapse;
+   width: 100%;
+ }
+ 
+ td, th {
+   border: 1px solid #ddd;
+   padding: 8px;
+ }
+ 
+ tr:nth-child(even){background-color: #f2f2f2;}
+ tr:nth-child(odd){background-color: white;}
+ 
+ tr:hover {background-color: #ddd;}
+ 
+ th {
+   padding-top: 12px;
+   padding-bottom: 12px;
+   text-align: left;
+   background-color: #003A6C;
+   color: white;
+ }
+ 
+ a.button {
+   background-color: white; 
+   color: black; 
+   border: 2px solid #0F5D9F;
+   padding: 5px 15px;
+   text-decoration: none;
+   margin: 20px 2px 0 2px;
+ }
+ 
+ a.button:hover {
+   background-color: #0F5D9F;
+   color: white;
+ }
+ 

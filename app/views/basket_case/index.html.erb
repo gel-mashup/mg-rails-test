@@ -1,9 +1,26 @@
-<h1>Fruit Basket</h1>
-<span class="data">raw data: <%= @fruits %></span>
-<br />
-<%= link_to "Order by Name - #{@order}", basket_case_order_by_fruit_path(order: @order), class: "button"%>
-<%= link_to "Order by Amount - #{@order}", basket_case_order_by_amount_path(order: @order), class: "button"%>
-
 <div class="container">
-<!-- code here !-->
+  <h1>Fruit Basket</h1>
+  <small class="data">Raw Data: <%= @fruits %></small>
+  <br>
+  <%= link_to "Order by Name - #{@order}", basket_case_order_by_fruit_path(order: @order), class: "button"%>
+  <%= link_to "Order by Amount - #{@order}", basket_case_order_by_amount_path(order: @order), class: "button"%>
+  <br>
+  <br>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Fruit</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @list_items.each do |fruit, amount| %>
+        <tr>
+          <td><%= fruit.to_s.titleize %></td>
+          <td><%= amount  %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
