@@ -1,7 +1,7 @@
 class BasketCaseController < ApplicationController
   before_action :set_fruits
   before_action :set_items, only: [:index]
-  before_action :retreive_items, only: [:order_by_fruit]
+  before_action :retreive_items, only: [:order_by_fruit, :order_by_amount]
 
   def index;
     puts "INDEX ACTION TRIGGERED"
@@ -20,7 +20,14 @@ class BasketCaseController < ApplicationController
 
   def order_by_amount
     # code here
-
+    @list_items = session[:list_items].to_h
+    # debugger
+    if(@list_items.values.first > @list_items.values.last)
+      @list_items = @list_items.sort_by(&:last).to_h
+    else
+      @list_items = @list_items.sort_by(&:last).reverse.to_h
+    end
+    session[:list_items] = @list_items.to_h
     render 'basket_case/index'
   end
 
