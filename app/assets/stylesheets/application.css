@@ -33,6 +33,19 @@
   margin: 0 8px;
 }
 
+.button.red {
+  background-color: #dc2f2f;
+}
+
+.button.brown {
+  background-color: #402a23;
+}
+
+.button.brown:hover {
+  background-color: #2c2d34;
+  transition: 0.7s;
+}
+
 .button:hover {
   background-color: #002ead;
   transition: 0.7s;
