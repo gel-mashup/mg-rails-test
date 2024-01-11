@@ -1,0 +1,12 @@
+.button.-sort-name {
+  background-color: #dc2f2f;
+}
+
+.button.-sort-amount {
+  background-color: #402a23;
+}
+
+.button.-sort-amount:hover {
+  background-color: #2c2d34;
+  transition: 0.6s;
+}
