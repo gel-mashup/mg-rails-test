@@ -4,6 +4,24 @@
 <%= link_to "Order by Name - #{@order}", basket_case_order_by_fruit_path(order: @order), class: "button"%>
 <%= link_to "Order by Amount - #{@order}", basket_case_order_by_amount_path(order: @order), class: "button"%>
 
-<div class="container">
+<div class="container" style="margin-top: 2rem;">
 <!-- code here !-->
+  <table>
+    <thead>
+      <th> Fruit </th>
+      <th> Quantity </th>
+    </thead>
+    <tbody>
+      <% @fruits.each do |name, qty| %>
+        <tr>
+          <td>
+            <%= name %>
+          </td>
+          <td>
+            <%= qty %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
