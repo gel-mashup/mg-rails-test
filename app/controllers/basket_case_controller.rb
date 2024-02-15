@@ -5,35 +5,13 @@ class BasketCaseController < ApplicationController
   def index; end
 
   def order_by_fruit
-    @order = params[:order]
     @list_items = @list_items.sort
-
-
-    if @order == nil || @order == 'asc'
-      @order = 'desc'
-    else
-      @list_items = @list_items.reverse
-      @order = 'asc'
-    end
-    
+    @list_items = @list_items.reverse
     render 'basket_case/index'
   end
 
   def order_by_amount
-
-
     # code here
-    @order = params[:order]
-        
-    @list_items = @list_items.sort
-
-    if @order == nil || @order == 'asc'
-      @list_items = @list_items.sort_by(&:last)
-      @order = 'desc'
-    else
-      @list_items = @list_items.sort_by(&:last).reverse
-      @order = 'asc'
-    end
 
     render 'basket_case/index'
   end
